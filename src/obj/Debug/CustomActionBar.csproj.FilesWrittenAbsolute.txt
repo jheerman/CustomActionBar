@@ -2,7 +2,10 @@
 /Users/john/Projects/CustomActionBar/src/bin/Debug/CustomActionBar.dll
 /Users/john/Projects/CustomActionBar/src/bin/Debug/CustomActionBar.CustomActionBar.apk
 /Users/john/Projects/CustomActionBar/src/obj/Debug/android/bin/CustomActionBar.CustomActionBar.apk
+<<<<<<< Updated upstream
 /Users/john/Projects/CustomActionBar/src/obj/Debug/res/layout/main.xml
+=======
+>>>>>>> Stashed changes
 /Users/john/Projects/CustomActionBar/src/obj/Debug/res/values/strings.xml
 /Users/john/Projects/CustomActionBar/src/obj/Debug/res/drawable/icon.png
 /Users/john/Projects/CustomActionBar/src/obj/Debug/res/drawable-hdpi/ab_bottom_solid_example.9.png
@@ -93,6 +96,7 @@
 /Users/john/Projects/CustomActionBar/src/obj/Debug/res/layout/tab2.xml
 /Users/john/Projects/CustomActionBar/src/obj/Debug/res/layout/tab3.xml
 /Users/john/Projects/CustomActionBar/src/obj/Debug/res/values/values_array.xml
+/Users/john/Projects/CustomActionBar/src/obj/Debug/res/layout/tab4.xml
 /Users/john/Projects/CustomActionBar/src/obj/Debug/R.cs.flag
 /Users/john/Projects/CustomActionBar/src/bin/Debug/CustomActionBar.CustomActionBar-Signed.apk
 /Users/john/Projects/CustomActionBar/src/obj/Debug/uploadflags.txt

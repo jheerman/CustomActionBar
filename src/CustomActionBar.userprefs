@@ -1,14 +1,24 @@
 ﻿<Properties>
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+<<<<<<< Updated upstream
   <MonoDevelop.Ide.Workbench ActiveDocument="Fragments/Fragment1.cs">
     <Files>
       <File FileName="Fragments/Fragment1.cs" Line="34" Column="23" />
       <File FileName="MainActivity.cs" Line="26" Column="4" />
+=======
+  <MonoDevelop.Ide.Workbench>
+    <Files>
+      <File FileName="Fragments/Fragment1.cs" Line="83" Column="21" />
+>>>>>>> Stashed changes
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
     <BreakpointStore />
   </MonoDevelop.Ide.DebuggingService.Breakpoints>
   <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+<<<<<<< Updated upstream
   <MonoDevelop.Ide.ItemProperties.CustomActionBar AndroidDeviceId-Debug="emulator-5554" MonoForAntroid.PreferredDevice="3.7in WVGA (Nexus One)" />
+=======
+  <MonoDevelop.Ide.ItemProperties.CustomActionBar MonoForAntroid.PreferredDevice="3.7in WVGA (Nexus One)" />
+>>>>>>> Stashed changes
 </Properties>

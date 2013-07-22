@@ -4,13 +4,10 @@ using Android.Content;
 using Android.Runtime;
 using Android.Views;
 using Android.Widget;
-using Android.OS;
-using Android.Graphics;
-using Android.Graphics.Drawables;
 using Android.Animation;
-using Android.Views.Animations;
-
-using Runnable = Java.Lang.Runnable;
+using Android.Graphics.Drawables;
+using Android.Graphics;
+using Android.OS;
 
 namespace CustomActionBar
 {
@@ -29,38 +26,7 @@ namespace CustomActionBar
 		public override void OnCreate (Bundle savedInstanceState)
 		{
 			base.OnCreate (savedInstanceState);
-		}
-
-		public override View OnCreateView (LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState)
-		{
-			base.OnCreateView (inflater, container, savedInstanceState);
-			var swipeView = inflater.Inflate (Resource.Layout.Tab1, container, false);
-
-			var list = Activity.FindViewById<OverscrollListView> (Resource.Id.listView1);
-			loadingBars = Activity.FindViewById<LinearLayout> (Resource.Id.loadingBars);
-			bar1 = Activity.FindViewById<ProgressBar> (Resource.Id.loadingBar1);
-			bar2 = Activity.FindViewById<ProgressBar> (Resource.Id.loadingBar2);
-			swipeText = Activity.FindViewById<TextView> (Resource.Id.swipeToRefreshText);
-
-			// Remove progress bar background
-			foreach (var p in new[] { bar1, bar2 }) {
-				var layer = p.ProgressDrawable as LayerDrawable;
-				if (layer != null)
-					layer.SetDrawableByLayerId (Android.Resource.Id.Background,
-					                            new ColorDrawable (Color.Transparent));
-			}
-
-			list.OverScrolled += deltaY => {
-				ShowSwipeDown ();
-
-				accumulatedDeltaY += -deltaY;
-				bar1.Progress = bar2.Progress = accumulatedDeltaY;
-				if (accumulatedDeltaY == 0)
-					HideSwipeDown ();
-			};
-			list.OverScrollCanceled += HideSwipeDown;
-
-			return swipeView;
+			// Create your fragment here
 		}
 
 		void ShowSwipeDown ()
@@ -96,6 +62,38 @@ namespace CustomActionBar
 			bar2Fade.Start ();
 			bar2Fade.AnimationEnd += (sender, e) => loadingBars.Visibility = ViewStates.Gone;
 			setup = false;
+		}
+	
+		public override View OnCreateView (LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState)
+		{
+			base.OnCreateView (inflater, container, savedInstanceState);
+			var view = inflater.Inflate (Resource.Layout.Tab1, container, false);
+
+			var list = view.FindViewById<OverscrollListView> (Resource.Id.listView1);
+			loadingBars = view.FindViewById<LinearLayout> (Resource.Id.loadingBars);
+			bar1 = view.FindViewById<ProgressBar> (Resource.Id.loadingBar1);
+			bar2 = view.FindViewById<ProgressBar> (Resource.Id.loadingBar2);
+			swipeText = view.FindViewById<TextView> (Resource.Id.swipeToRefreshText);
+
+			// Remove progress bar background
+			foreach (var p in new[] { bar1, bar2 }) {
+				var layer = p.ProgressDrawable as LayerDrawable;
+				if (layer != null)
+					layer.SetDrawableByLayerId (Android.Resource.Id.Background,
+					                            new ColorDrawable (Color.Transparent));
+			}
+
+			list.OverScrolled += deltaY => {
+				ShowSwipeDown ();
+
+				accumulatedDeltaY += -deltaY;
+				bar1.Progress = bar2.Progress = accumulatedDeltaY;
+				if (accumulatedDeltaY == 0)
+					HideSwipeDown ();
+			};
+			list.OverScrollCanceled += HideSwipeDown;
+
+			return view;
 		}
 	}
 }

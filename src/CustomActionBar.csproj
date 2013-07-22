@@ -57,7 +57,6 @@
     <None Include="Assets\AboutAssets.txt" />
   </ItemGroup>
   <ItemGroup>
-    <AndroidResource Include="Resources\layout\Main.axml" />
     <AndroidResource Include="Resources\values\Strings.xml" />
     <AndroidResource Include="Resources\drawable\Icon.png" />
     <AndroidResource Include="Resources\drawable-hdpi\ab_bottom_solid_example.9.png" />
@@ -150,6 +149,11 @@
     <AndroidResource Include="Resources\layout\Tab2.axml" />
     <AndroidResource Include="Resources\layout\Tab3.axml" />
     <AndroidResource Include="Resources\values\values_array.xml" />
+<<<<<<< Updated upstream
+=======
+    <AndroidResource Include="Resources\layout\Main.axml" />
+    <AndroidResource Include="Resources\layout\Tab4.axml" />
+>>>>>>> Stashed changes
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Novell\Novell.MonoDroid.CSharp.targets" />
   <ItemGroup>
