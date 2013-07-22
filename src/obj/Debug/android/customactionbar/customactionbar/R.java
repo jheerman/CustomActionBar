@@ -8,6 +8,9 @@
 package customactionbar.customactionbar;
 
 public final class R {
+    public static final class array {
+        public static final int planets_array=0x7f070000;
+    }
     public static final class attr {
     }
     public static final class color {
@@ -49,8 +52,13 @@ public final class R {
         public static final int tab_unselected_pressed_example=0x7f020020;
     }
     public static final class id {
-        public static final int fragmentContainer=0x7f070001;
-        public static final int myButton=0x7f070000;
+        public static final int fakeActionBar=0x7f080001;
+        public static final int fragmentContainer=0x7f080000;
+        public static final int listView1=0x7f080003;
+        public static final int loadingBar1=0x7f080005;
+        public static final int loadingBar2=0x7f080006;
+        public static final int loadingBars=0x7f080004;
+        public static final int swipeToRefreshText=0x7f080002;
     }
     public static final class layout {
         public static final int main=0x7f030000;

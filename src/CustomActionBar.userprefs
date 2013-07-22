@@ -1,14 +1,14 @@
 ﻿<Properties>
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="CustomActionBar/MainActivity.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Fragments/Fragment1.cs">
     <Files>
-      <File FileName="CustomActionBar/MainActivity.cs" Line="17" Column="4" />
-      <File FileName="CustomActionBar/Resources/values/colors_example.xml" Line="1" Column="1" />
-      <File FileName="CustomActionBar/Resources/values/styles_example.xml" Line="58" Column="13" />
+      <File FileName="Fragments/Fragment1.cs" Line="34" Column="23" />
+      <File FileName="MainActivity.cs" Line="26" Column="4" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
     <BreakpointStore />
   </MonoDevelop.Ide.DebuggingService.Breakpoints>
   <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+  <MonoDevelop.Ide.ItemProperties.CustomActionBar AndroidDeviceId-Debug="emulator-5554" MonoForAntroid.PreferredDevice="3.7in WVGA (Nexus One)" />
 </Properties>

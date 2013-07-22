@@ -5,17 +5,19 @@ using Android.Runtime;
 using Android.Views;
 using Android.Widget;
 using Android.OS;
+using Android.Graphics.Drawables;
+using Android.Graphics;
 
 namespace CustomActionBar
 {
 	[Activity (Theme="@style/Theme.Example", Label = "CustomActionBar", MainLauncher = true)]
 	public class MainActivity : Activity
 	{
-		int count = 1;
 
 		protected override void OnCreate (Bundle bundle)
 		{
 			base.OnCreate (bundle);
+			//RequestWindowFeature (WindowFeatures.ActionBarOverlay);
 
 			// Set our view from the "main" layout resource
 			SetContentView (Resource.Layout.Main);
@@ -38,14 +40,7 @@ namespace CustomActionBar
 			ActionBar.AddTab (tab3);
 
 			ActionBar.SetSelectedNavigationItem (0);
-
-			// Get our button from the layout resource,
-			// and attach an event to it
-			Button button = FindViewById<Button> (Resource.Id.myButton);
-			
-			button.Click += delegate {
-				button.Text = string.Format ("{0} clicks!", count++);
-			};
+			ActionBar.SetBackgroundDrawable (new ColorDrawable (Color.Transparent));
 		}
 	}
 }

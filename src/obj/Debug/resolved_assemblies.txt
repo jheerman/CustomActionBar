@@ -1,1 +1,1 @@
-/Users/john/Projects/CustomActionBar/CustomActionBar/bin/Debug/CustomActionBar.dll
+/Users/john/Projects/CustomActionBar/src/bin/Debug/CustomActionBar.dll

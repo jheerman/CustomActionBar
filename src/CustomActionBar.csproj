@@ -50,6 +50,7 @@
     <Compile Include="Fragments\Fragment1.cs" />
     <Compile Include="Fragments\Fragment2.cs" />
     <Compile Include="Fragments\Fragment3.cs" />
+    <Compile Include="OverscrollListView.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\AboutResources.txt" />
@@ -148,6 +149,7 @@
     </AndroidResource>
     <AndroidResource Include="Resources\layout\Tab2.axml" />
     <AndroidResource Include="Resources\layout\Tab3.axml" />
+    <AndroidResource Include="Resources\values\values_array.xml" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Novell\Novell.MonoDroid.CSharp.targets" />
   <ItemGroup>
