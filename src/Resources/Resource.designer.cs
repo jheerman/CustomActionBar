@@ -253,6 +253,9 @@ namespace CustomActionBar
 			// aapt resource value: 0x7f050000
 			public const int hello = 2131034112;
 			
+			// aapt resource value: 0x7f050002
+			public const int refresh = 2131034114;
+			
 			static String()
 			{
 				global::Android.Runtime.ResourceIdManager.UpdateIdValues();

@@ -17,6 +17,7 @@ namespace CustomActionBar
 		ProgressBar bar1;
 		ProgressBar bar2;
 		TextView swipeText;
+		FrameLayout fakeActionBar;
 
 		bool setup = false;
 		int accumulatedDeltaY = 0;
@@ -32,7 +33,7 @@ namespace CustomActionBar
 		void ShowSwipeDown ()
 		{
 			if (!setup) {
-				Activity.ActionBar.Hide ();
+				//Activity.ActionBar.Hide ();
 				if (bar1Fade != null) {
 					bar1Fade.Cancel ();
 					bar1Fade = null;
@@ -42,6 +43,7 @@ namespace CustomActionBar
 					bar2Fade = null;
 				}
 				loadingBars.Visibility = ViewStates.Visible;
+				fakeActionBar.Visibility = ViewStates.Visible;
 				swipeText.TranslationY = -(Activity.ActionBar.Height + swipeText.Height + 4);
 				swipeText.Visibility = ViewStates.Visible;
 				swipeText.Animate ().TranslationY (0).SetStartDelay (50).Start ();
@@ -52,8 +54,9 @@ namespace CustomActionBar
 
 		void HideSwipeDown ()
 		{
-			Activity.ActionBar.Show ();
+			//Activity.ActionBar.Show ();
 			swipeText.Visibility = ViewStates.Invisible;
+			fakeActionBar.Visibility = ViewStates.Invisible;
 			bar1Fade = ObjectAnimator.OfInt (bar1, "progress", bar1.Progress, 0);
 			bar1Fade.SetDuration (250);
 			bar1Fade.Start ();
@@ -74,6 +77,7 @@ namespace CustomActionBar
 			bar1 = view.FindViewById<ProgressBar> (Resource.Id.loadingBar1);
 			bar2 = view.FindViewById<ProgressBar> (Resource.Id.loadingBar2);
 			swipeText = view.FindViewById<TextView> (Resource.Id.swipeToRefreshText);
+			fakeActionBar = view.FindViewById<FrameLayout> (Resource.Id.fakeActionBar);
 
 			// Remove progress bar background
 			foreach (var p in new[] { bar1, bar2 }) {

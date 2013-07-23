@@ -10,16 +10,19 @@
         android:layout_height="?android:attr/actionBarSize"
         android:id="@+id/fakeActionBar"
         style="?android:attr/actionBarStyle"
+        android:background="#FFFFFF"
+        android:visibility="invisible"
         android:minWidth="25px"
-        android:minHeight="25px">
+        android:minHeight="0dip">
         <TextView
-            android:text="Swipe down to refresh"
+            android:text="@string/refresh"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:id="@+id/swipeToRefreshText"
             android:layout_gravity="center"
             android:visibility="invisible"
             android:textColor="#0099cc"
+            android:background="#FFFFFF"
             android:textSize="18sp" />
     </FrameLayout>
     <FrameLayout

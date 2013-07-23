@@ -1,1 +1,1 @@
-<resources><string name="hello">Hello World, Click Me!</string><string name="app_name">CustomActionBar</string></resources>
+<resources><string name="hello">Hello World, Click Me!</string><string name="app_name">CustomActionBar</string><string name="refresh">Release to Refresh</string></resources>
